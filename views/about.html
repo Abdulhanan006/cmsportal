@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | CMS Powered</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="page-shell light-mode">
+    <header class="page-header">
+      <div class="brand-block">
+        <span class="brand-label">CMS Agency</span>
+        <button id="themeToggle" class="theme-toggle">Dark</button>
+      </div>
+      <a class="nav-button" href="/admin">Admin Panel</a>
+    </header>
+
+    <main class="about-layout">
+      <section class="hero-card">
+        <div class="hero-copy">
+          <span class="eyebrow">About Us</span>
+          <h1 id="companyHeadline">Loading headline...</h1>
+          <p id="aboutDescription">
+            Fetching about page content from the CMS...
+          </p>
+        </div>
+        <div class="hero-image">
+          <img
+            id="companyImage"
+            src="/images/about-placeholder.png"
+            alt="Company"
+          />
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <article class="info-card">
+          <h2>Company Name</h2>
+          <p id="companyName">Loading...</p>
+        </article>
+        <article class="info-card">
+          <h2>Our Mission</h2>
+          <p id="missionText">Loading...</p>
+        </article>
+        <article class="info-card">
+          <h2>Our Vision</h2>
+          <p id="visionText">Loading...</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p>Built with Node, Express, MongoDB, and custom CMS control.</p>
+    </footer>
+
+    <script src="/js/about.js"></script>
+  </body>
+</html>

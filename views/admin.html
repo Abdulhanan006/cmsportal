@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | About CMS</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="admin-shell light-mode">
+  <header class="dashboard-header">
+    <div>
+      <h1>Admin Dashboard</h1>
+      <p>Manage your About page content with version history and fast updates.</p>
+    </div>
+    <div class="dashboard-actions">
+      <button id="logoutButton" class="secondary-btn">Logout</button>
+      <button id="themeToggle" class="theme-toggle">Dark</button>
+    </div>
+  </header>
+
+  <main class="dashboard-grid">
+    <section class="dashboard-panel">
+      <div class="panel-card">
+        <h2>About Content</h2>
+        <form id="aboutForm" class="editor-form">
+          <label>Company Name</label>
+          <input type="text" id="companyName" required />
+
+          <label>Headline</label>
+          <input type="text" id="headline" required />
+
+          <label>Description</label>
+          <div id="descriptionEditor" class="rich-editor" contenteditable="true"></div>
+
+          <label>Mission</label>
+          <textarea id="mission" rows="3" required></textarea>
+
+          <label>Vision</label>
+          <textarea id="vision" rows="3" required></textarea>
+
+          <label>Image URL</label>
+          <input type="url" id="imageUrl" placeholder="https://example.com/image.png" />
+
+          <label>Upload Image</label>
+          <input type="file" id="imageFile" accept="image/*" />
+
+          <button type="submit" class="primary-btn">Update About Page</button>
+          <div id="aboutMessage" class="form-message"></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="dashboard-panel history-panel">
+      <div class="panel-card">
+        <div class="panel-card-header">
+          <h2>Version History</h2>
+          <span id="versionCount" class="badge">0</span>
+        </div>
+        <ul id="versionList" class="version-list">
+          <li class="version-item">Loading history...</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <div id="loadingOverlay" class="loading-overlay hidden">
+    <div class="spinner"></div>
+  </div>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>
